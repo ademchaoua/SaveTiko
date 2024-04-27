@@ -23,15 +23,14 @@ SaveTiko is a simple PHP-based tool that allows you to download TikTok videos wi
 
 5. Once the video information is fetched, you can download the video or audio track by clicking on the respective links.
    
-#Requirements
+##Requirements
 
 PHP >= 7.0
 cURL extension enabled
 
-#Usage Example
+##Usage Example
 
    ```bash
-   <?php
 
    // Include the SaveTiko class
    require_once 'SaveTiko.php';
@@ -57,11 +56,10 @@ cURL extension enabled
    $audioContent = $saveTiko->download($videoStats, 'audio');
    file_put_contents('downloaded_audio.mp3', $audioContent);
 
-   ?>
 
    ```
 
-#License
+##License
 
 This project is licensed under the MIT License.
 
