@@ -14,13 +14,13 @@ SaveTiko is a simple PHP-based tool that allows you to download TikTok videos wi
 
    ```bash
    git clone https://github.com/yourusername/SaveTiko.git
-   ```bash
+   ```
    Upload the files to your web server or local development environment.
-   ```bash
+
    Access the index.php file in your browser.
-   ```bash
+
    Paste the TikTok video URL into the input field and click the "Download" button.
-   ```bash
+
    Once the video information is fetched, you can download the video or audio track by clicking on the respective links.
    
 
