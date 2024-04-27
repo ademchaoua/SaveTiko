@@ -32,29 +32,19 @@ cURL extension enabled
 
    ```bash
 
-   // Include the SaveTiko class
    require_once 'SaveTiko.php';
 
-   // Create a new instance of SaveTiko with the TikTok video URL
-   $saveTiko = new SaveTiko('https://www.tiktok.com/@username/video/1234567890');
+$saveTiko = new SaveTiko('https://www.tiktok.com/@username/video/1234567890');
+$videoStats = $saveTiko->getVideoStats();
 
-   // Get video statistics
-   $videoStats = $saveTiko->getVideoStats();
+echo 'Likes: ' . $videoStats['likes'] . PHP_EOL;
+echo 'Shares: ' . $videoStats['shares'] . PHP_EOL;
+echo 'Comments: ' . $videoStats['comments'] . PHP_EOL;
+echo 'Plays: ' . $videoStats['plays'] . PHP_EOL;
+echo 'Collects: ' . $videoStats['collects'] . PHP_EOL;
 
-   // Display video information
-   echo 'Likes: ' . $videoStats['likes'] . PHP_EOL;
-   echo 'Shares: ' . $videoStats['shares'] . PHP_EOL;
-   echo 'Comments: ' . $videoStats['comments'] . PHP_EOL;
-   echo 'Plays: ' . $videoStats['plays'] . PHP_EOL;
-   echo 'Collects: ' . $videoStats['collects'] . PHP_EOL;
-
-   // Download video
-   $videoContent = $saveTiko->download($videoStats, 'video');
-   file_put_contents('downloaded_video.mp4', $videoContent);
-
-   // Download audio
-   $audioContent = $saveTiko->download($videoStats, 'audio');
-   file_put_contents('downloaded_audio.mp3', $audioContent);
+file_put_contents('downloaded_video.mp4', $saveTiko->download($videoStats, 'video'));
+file_put_contents('downloaded_audio.mp3', $saveTiko->download($videoStats, 'audio'));
 
 
    ```
