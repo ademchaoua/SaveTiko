@@ -46,12 +46,11 @@ file_put_contents('downloaded_video.mp4', $saveTiko->download($videoStats, 'vide
 file_put_contents('downloaded_audio.mp3', $saveTiko->download($videoStats, 'audio'));
    ```
 
-## License
-
-- This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
-
 ## Acknowledgements
 
 - SaveTiko - A simple PHP class for downloading [TikTok videos](https://github.com/ademchaoua/SaveTiko).
 
+## License
+
+- This project is licensed under the [MIT License](https://opensource.org/licenses/MIT).
 
